@@ -1,0 +1,17 @@
+<server description="My Sample Servlet server">
+    <featureManager>
+        <feature>servlet-5.0</feature>
+<!--        <feature>restfulWS-3.0</feature>-->
+<!--        <feature>webProfile-9.1</feature>-->
+    </featureManager>
+
+    <variable name="default.http.port" defaultValue="9080"/>
+    <variable name="default.https.port" defaultValue="9443"/>
+    <variable name="app.context.root" defaultValue="/liberty"/>
+
+    <!-- tag::httpEndpoint[] -->
+    <httpEndpoint httpPort="${default.http.port}" 
+    httpsPort="${default.https.port}" id="defaultHttpEndpoint"  host="*" />
+    <!-- end::httpEndpoint[] -->
+    <webApplication id="MySpringMvcStepByStep" location="MySpringMvcStepByStep-1.0-SNAPSHOT.war" contextRoot="${app.context.root}" />
+</server>

@@ -11,8 +11,9 @@
     <title>Yahoo</title>
 </head>
 <body>
-<form action="/login.do" method="post">
-    Name : <input type="text" name="name"> Password : <input type="password" name="password"><input type="submit" value="Login">
-</form>
+    <p><span style="color: red; ">${errorMessage}</span></p>
+    <form action="/login" method="post">
+        Name : <input type="text" name="name"> Password : <input type="password" name="password"><input type="submit" value="Login">
+    </form>
 </body>
 </html>
